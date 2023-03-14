@@ -1,0 +1,79 @@
+
+
+-- -- Mach created by King˳Hunter18
+-- Config.DoorList['casino1'] = {
+--     lockpick = false,
+--     audioRemote = false,
+--     locked = true,
+--     authorizedJobs = { ['none']=0 },
+--     objHeading = 328.00,
+--     garage = false,
+--     objHash = -1957832210,
+--     fixText = false,
+--     objCoords = vector3(936.9142, 2.19565, 77.77723),
+--     maxDistance = 5.0,
+--     slides = false,
+--     --oldMethod = true,
+--     --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+--     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+--     --autoLock = 1000,
+--     --doorRate = 1.0,
+--     --showNUI = true
+-- }
+-- Config.DoorList['casino2'] = {
+--     lockpick = false,
+--     audioRemote = false,
+--     locked = true,
+--     authorizedJobs = { ['none']=0 },
+--     objHeading = 58.01,
+--     garage = false,
+--     objHash = 901693952,
+--     fixText = false,
+--     objCoords = vector3(930.0135, 29.9094, 81.32159),
+--     maxDistance = 2.0,
+--     slides = false,
+--     --oldMethod = true,
+--     --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+--     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+--     --autoLock = 1000,
+--     --doorRate = 1.0,
+--     --showNUI = true
+-- }
+-- Config.DoorList['casino3'] = {
+--     lockpick = false,
+--     audioRemote = false,
+--     locked = true,
+--     authorizedJobs = { ['none']=0 },
+--     objHeading = 147.95,
+--     garage = false,
+--     objHash = 901693952,
+--     fixText = false,
+--     objCoords = vector3(930.4228, 33.2631, 81.24268),
+--     maxDistance = 2.0,
+--     slides = false,
+--     --oldMethod = true,
+--     --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+--     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+--     --autoLock = 1000,
+--     --doorRate = 1.0,
+--     --showNUI = true
+-- }
+-- Config.DoorList['casino4'] = {
+--     lockpick = false,
+--     audioRemote = false,
+--     locked = true,
+--     authorizedJobs = { ['none']=0 },
+--     objHeading = 58.10,
+--     garage = false,
+--     objHash = -1691719897,
+--     fixText = false,
+--     objCoords = vector3(968.3635, 63.24729, 112.6529),
+--     maxDistance = 2.0,
+--     slides = false,
+--     --oldMethod = true,
+--     --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+--     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+--     --autoLock = 1000,
+--     --doorRate = 1.0,
+--     --showNUI = true
+-- }
