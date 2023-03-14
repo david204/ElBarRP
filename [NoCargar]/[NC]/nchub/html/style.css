@@ -1,0 +1,40 @@
+.success {
+    
+    background: rgb(2,0,36);
+    background: linear-gradient(to right, rgba(255,0,0,0), #d8d8d8d8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(29, 120, 255);
+    
+}
+
+.primary {
+    background: rgb(2,0,36);
+    background: linear-gradient(to right, rgba(255,0,0,0), #d8d8d8d8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(29, 120, 255);
+    
+}
+
+.error {
+    background: rgb(2,0,36);
+    background: linear-gradient(to right, rgba(255,0,0,0), #d8d8d8d8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(29, 120, 255);
+    
+}
+
+.police {
+    background: rgb(2,0,36);
+    background: linear-gradient(to right, rgba(255,0,0,0), #d8d8d8d8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(29, 120, 255);
+    
+}
+
+.ambulance {
+    background: rgb(2,0,36);
+    background: linear-gradient(to right, rgba(255,0,0,0), #d8d8d8d8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(29, 120, 255);
+    
+}

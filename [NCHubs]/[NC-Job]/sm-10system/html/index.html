@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM-10System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Thasadith&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&family=Sulphur+Point:wght@300&display=swap" rel="stylesheet">
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="./js/app.js"></script>
+    <script>
+        var sound1 = new Howl({src: ["./sounds/beep.mp3"]});
+        window.addEventListener('message', function(event) {
+            let Sound = event.data.Sound;
+            if (Sound == 'EmergencySound') {
+                sound1.volume(0.1);
+                sound1.play();
+            }
+        })
+    </script>
+    <script>
+        $( function() {
+            $( "#SM-System-Overlay" ).draggable({
+                appendTo: 'body',
+                containment: 'window',
+                scroll: false,
+            });
+
+            $( "#SystemSettingsBG" ).draggable({
+                appendTo: 'body',
+                containment: 'window',
+                scroll: false,
+            });
+        });
+    </script>
+     <script>
+        
+        $( function() {
+            
+            let Duty = false
+            $( ".switch2" ).on( "change", function() {
+                if (!Duty) {
+                    fetch("https://sm-10system/Duty",{
+                        method: "POST",
+                        body: JSON.stringify({Duty: true})
+                    })
+                    Duty = true
+                }else {
+                    fetch("https://sm-10system/Duty",{
+                        method: "POST",
+                        body: JSON.stringify({Duty: false})
+                    })
+                    Duty = false
+                }
+            });
+
+            let SystemOn = false
+            $( ".switch" ).on( "change", function() {
+                if (!SystemOn) {
+                    fetch("https://sm-10system/Update",{
+                        method: "POST",
+                        body: JSON.stringify({Way: 'Add'})
+                    })
+                    SystemOn = true
+                }else {
+                    fetch("https://sm-10system/Update",{
+                        method: "POST",
+                        body: JSON.stringify({Way: 'Remove'})
+                    })
+                    SystemOn = false
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id = "SM-System-Overlay">
+        <div id = 'SM-System-Active'>
+            
+            <span id = 'SM-System-Active-Text'>Active Officers (17) </span>
+        </div>
+        <div id = 'SM-System-Container'>
+            <div id = 'Officers'>
+               
+                <span style = "background-color:rgb(255, 57, 57);"id = "tag">200</span> Sam Walker - C.O.P  <span style="color: #ffffff; font-weight: bold;" class=""> (x) | </span><span id = "method" "><i class="fas fa-helicopter" style = "color:#81B3FF;""></i></span>
+            </div>
+            <div id = 'Officers'>
+                <span id = "tag">252</span> Ofir Abargil - Captain - <span style="color: #ffffff; font-weight: bold;" class=""> (x) | </span>  <span id = "method"><i class="fas fa-car" style = "color:#81B3FF;"></i></span>
+            </div>
+        </div>
+   </div>
+   <div id = "SystemSettingsBG">
+        <div id = "SystemSettingsOptionsBG">
+            <div id = "System-Settings"><i class="fa-solid fa-gears"></i> System Settings</div>
+            <div id = "System-Management"><i class="fa-solid fa-user-gear"></i>   Management</div>
+            <div id = "Patrol-Status"><i class="fa-solid fa-user-secret"></i>   Patrol Stuff</div>
+            
+            
+            <div id = "System-Status"><i class="fa-solid fa-circle-check"></i>   System Status</div>
+            <div id = "ToggleSystem">
+                Toggle System
+            </div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label> 
+            
+            <div id = "System-Save"><i class="fa-regular fa-circle-check"></i>   Save</div>
+            <div id = "System-Exit"><i class="fa-regular fa-circle-xmark"></i>   Exit</div>
+        </div>
+        <div id = "SystemSettingsPage">
+            <div id = "Systemtitle">10 System Personal Settings:</div>
+            <div id = "kav"></div>
+            <div id = "SystemDuty">Duty:</div>
+            <label class="switch2">
+                <input type="checkbox">
+                <span class="slider2 round"></span>
+            </label> 
+            <div id = "SystemOpacity">Opacity:</div>
+            <input type="number" id="opacityinput" name="opacityinput"placeholder="No.">
+            <div id = "SystemSize">Font Size:</div>
+            <input type="number" id="fontinput" name="fontinput"placeholder="No.">
+            <div id = "SystemColor">Color:</div>
+            <input type="color" id="colorpicker" name="colorpicker" value="#87BEFF">
+            <div id = "SystemColor2">Method Color:</div>
+            <input type="color" id="colorpicker2" name="colorpicker2" value="#87BEFF">
+            
+        </div>
+        <div id = "SystemManagementPage">
+            <div id = "Systemtitle">Management Settings:</div>
+            <div id = "kav"></div>
+            
+
+
+            <div id = "HireOfficer">Hire Officer:</div>
+            <input type="number" id="HireOfficerId" name="HireOfficerId"placeholder="ID">
+            <input type="number" id="HireOfficerGrade" name="HireOfficerGrade"placeholder="Grade">
+            <input type="text" id="HireOfficerCallSign" name="HireOfficerCallSign"placeholder="CallSign">
+            
+            <div id = "FireOfficer">Fire Officer:</div>
+            <input type="text" id="FireOfficerCallsign" name="FireOfficerCallsign"placeholder="CallSign">
+            <!-- <input type="number" id="fontinput" name="fontinput"placeholder="No."> -->
+        </div>
+        <div id = "PatrolStuff">
+            <div id = "Systemtitle">10 System Patrol Stuff</div>
+            <div id = "kav"></div>
+            <div id = "SystemCallSign">Set Callsign:</div>
+            <input type="number" id="callsignidinput" name="callsignidinput"placeholder="ID">
+            <input type="text" id="callsigninput" name="callsigninput"placeholder="No.">
+            <div id = "SystemMove">Move To Radio:</div>
+            <input type="text" id="movecallsign" name="movecallsign"placeholder="Callsign">
+            <input type="number" id="moveradion" name="moveradion"placeholder="No.">
+        </div>
+        <div id = "SystemStatus">
+            <div id = "Systemtitle">10 System Status</div>
+            <div id = "kav"></div>
+            <div id = "FullName">Name:</div>
+            <div id = "FullNameAnswer">Sam Walker</div>
+            <div id = "GradeName">Rank:</div>
+            <div id = "Rank">Lieutenant</div>
+            <div id = "Tag">Tag:</div>
+            <div id = "TagAnswer">250</div>
+            <div id = "Time">Time In Duty:</div>
+            <div id = "DutyTime">5 Hours</div>
+        </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,935 @@
+
+*{
+    user-select: none;
+    font-family: Calibri;    
+    letter-spacing: 1.2px;
+}
+#SM-System-Overlay { 
+    position: absolute;
+    left: 70%;
+    top: 1%;
+    height:auto !important;
+    width: fit-content;
+    float:right;
+    flex-direction: column;
+    border-radius: 5px;
+    direction: ltr;
+    font-family: Calibri;
+    background-color: #0a0e17e8;
+    opacity: 100%;
+    border-radius: 5px;
+    border:1px solid rgba(26, 26, 26, 0.308);
+    box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.726);
+    display: none;
+}
+#SM-System-Active {
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #0000006b;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display:flex;
+    justify-content: center;
+    text-decoration: underline;
+    border-radius: 3px;
+}
+#SM-System-Active-Text {
+    transition: transform 0.5s;
+}
+#SM-System-Active:hover > #SM-System-Active-Text {
+    transform: scale(1.02);
+}
+#SM-System-Container {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+
+#Officers {
+    font-family: 'Red Hat Display', sans-serif;
+    margin-right: 4px;
+    margin-left: 4px;
+    color: white;
+    text-align: left;
+    margin-top: 0.65rem;
+    margin-bottom: 0.65rem;
+    /* font-size: 1.05rem; */
+}
+
+
+#tag{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #81B3FF;
+    /* font-weight: bold; */
+    margin-right: 5px;
+    padding: 1px 7px 1px 7px;
+    border-radius: 5px;
+}
+
+
+#SystemSettingsBG{
+    box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.726);
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 831px;
+    top:20%;
+    left: 25%;
+    height: 576px;
+    background: #0D0D0D;
+    border: 1px solid #000000;
+    border-radius: 9px;
+}
+#SystemSettingsOptionsBG{
+    position: absolute;
+    left: 0%;
+    width: 203px;
+    height: 570px;
+    background: #0F0F0F;
+    border-radius: 5px;
+}
+#System-Settings{
+    color: white;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #0C0C0C;
+    position: absolute;
+    top: 50px;
+    font-size: 18px;
+    font-family: 'Thasadith', sans-serif;
+    letter-spacing: 1px;
+    transition: 0.5s;
+
+}
+#System-Settings:hover{
+    transform: scale(1.02);
+
+}
+
+#System-Management:hover{
+    transform: scale(1.02);
+
+}
+#Patrol-Status:hover{
+    transform: scale(1.02);
+
+}
+#System-Status:hover{
+    transform: scale(1.02);
+
+}
+#System-Management{
+    transition: 0.5s;
+    color: white;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #0C0C0C;
+    position: absolute;
+    top: 120px;
+    font-size: 18px;
+    font-family: 'Thasadith', sans-serif;
+    letter-spacing: 1px;
+
+}
+#System-Status{
+    transition: 0.5s;
+    color: white;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #0C0C0C;
+    position: absolute;
+    top: 190px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Thasadith', sans-serif;
+}
+#Patrol-Status{
+    transition: 0.5s;
+    color: white;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #0C0C0C;
+    position: absolute;
+    top: 270px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Thasadith', sans-serif;
+}
+#System-Save{
+    color: #87BEFF;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 20%;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Thasadith', sans-serif;
+}
+#System-Exit{
+    color: #ff8787;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 10%;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 42px;
+    height: 20px;
+    top:65.5%;
+    left:40%;
+}
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1D1D1D;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #87BEFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #1f1f1f;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #87bdff1f;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#ToggleSystem{
+    position: absolute;
+    top: 60%;
+    color:white;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    background-color: #0C0C0C;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Thasadith', sans-serif;
+}
+
+#Systemtitle{
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    left:25%;
+    top:3%;
+    font-size: 17px;
+}
+#kav{
+    position: absolute;
+    width: 76%;
+    height: 1px;
+    background: #333333;
+    position: absolute;
+    right:0%;
+    top: 8%;
+}
+
+#SystemDuty{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:14%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#SystemOpacity{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:25%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#SystemSize{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:36%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+
+#SystemColor{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:47%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#SystemColor2{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:58%;
+    font-size: 17px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#SystemShow{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:58%;
+    font-size: 17px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.switch2 {
+    position: absolute;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    top:14.8%;
+    left:46%;
+}
+  
+  .switch2 input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1D1D1D;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider2:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 30px;
+    background-color: #87BEFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider2 {
+    background-color: #1f1f1f;
+}
+  
+input:focus + .slider2 {
+    box-shadow: 0 0 1px #87BEFF;
+}
+  
+input:checked + .slider2:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+  /* Rounded slider2s */
+.slider2.round {
+    border-radius: 34px;
+}
+  
+.slider2.round:before {
+    border-radius: 50%;
+}
+
+.switch3 {
+    position: absolute;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    top:57.8%;
+    left:46%;
+}
+  
+  .switch3 input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider3 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1D1D1D;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider3:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 30px;
+    background-color: #87BEFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider3 {
+    background-color: #87BEFF;
+}
+  
+input:focus + .slider3 {
+    box-shadow: 0 0 1px #87BEFF;
+}
+  
+input:checked + .slider3:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+  /* Rounded slider3s */
+.slider3.round {
+    border-radius: 34px;
+}
+  
+.slider3.round:before {
+    border-radius: 50%;
+}
+
+
+
+#opacityinput {
+    position: absolute;
+    top:25%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+
+
+#fontinput {
+    position: absolute;
+    top:36%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+
+#colorpicker {
+    position: absolute;
+    top:47%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #00000000;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+#colorpicker2 {
+    position: absolute;
+    top:58%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #00000000;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+#SystemCallSign{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:26%;
+    top:15%;
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+
+#callsignidinput {
+    position: absolute;
+    top:15%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+#callsigninput {
+    position: absolute;
+    top:15%;
+    left: 55%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+
+#SystemMove{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:26%;
+    top:28%;
+    font-size: 18px;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+
+#movecallsign {
+    position: absolute;
+    top:28%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+#moveradion {
+    position: absolute;
+    top:28%;
+    left: 55%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+
+#HireOfficer{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:26%;
+    top:15%;
+    font-size: 18px;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#HireOfficerId {
+    position: absolute;
+    top:15%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+
+#HireOfficerGrade {
+    position: absolute;
+    top:15%;
+    left: 55%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+#HireOfficerCallSign {
+    position: absolute;
+    top:15%;
+    left: 65%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+
+#FireOfficer{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:26%;
+    top:28%;
+    font-size: 18px;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#FireOfficerCallsign {
+    position: absolute;
+    top:28%;
+    left: 45%;
+    width:60px;
+    height: 30px;
+    background-color: #141414;
+    color:rgb(180, 180, 180);
+    border: 1px solid #000a2400;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+
+}
+#FullName{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:14%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#FullNameAnswer{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:45%;
+    top:14%;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#GradeName{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:25%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+
+#Rank{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:45%;
+    top:25%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+
+#Tag{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:36%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+
+#TagAnswer{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:45%;
+    top:36%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+#Time{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:27%;
+    top:47%;
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}
+
+#DutyTime{
+    background-color: #141414;
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Sulphur Point', sans-serif;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    left:45%;
+    top:47%;
+    font-size: 20px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    height: 35px;
+    border-radius: 4px;
+}

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    background: none !important;
+}
+
+
+h1{
+    font-family: "Titillium Web" !important;
+    font-weight: 400 !important; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.msum{
+    font-family: "Titillium Web" !important;
+    font-weight: 900 !important; 
+    font-size:200%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+#safePin{
+    position: fixed;
+    text-align: center;
+    width: 25%;
+    background-color: #1d2429;
+    color: white;
+    text-decoration: rgb(93, 158, 255);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+#safePassword{
+    font-size: 20px;
+    padding: 25px;
+    height: 500px;
+    width: 350px;
+    box-shadow: none;
+    background-color: #20282e;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 12px;
+}   
+
+#container1 {
+    font-family: "nos";
+    font-size: 20px;
+    padding: 25px;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    background-color: #20282e;
+    width: 20%;
+  height: 50%;
+    border-radius: 9px;
+}
+
+#mbt1{
+    position: fixed;
+    top: 30%;
+    left: 17%;
+    line-height: 60%;
+}
+#mbt2{
+    position: fixed;
+    top: 40%;
+    left: 17%;
+    line-height: 60%;
+}
+#mbt3{
+    position: fixed;
+    top: 50%;
+    left: 17%;
+    line-height: 60%;
+}
+
+#mbt4{
+    position: fixed;
+    top: 60%;
+    left: 17%;
+    line-height: 60%;
+}
+
+#mbt5{
+    position: fixed;
+    top: 70%;
+    left: 17%;
+    line-height: 60%;
+}
+
+.btn{
+    font-family: "Titillium Web";
+    font-weight: 400;
+    position: relative;
+    width: 2.6vw !important;
+  height: 2.6vw !important;
+    font-size: 0.8vw !important;
+    background-color: #425e79;
+    font-weight: 800;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    border-radius: 2%;
+    border-style: hidden;
+}
+
+.btn:focus{
+    background-color: rgb(93, 158, 255);
+    border: 0;
+    outline: 0;
+}
+
+div button:hover{
+    border: 0;
+    outline: 0;
+    background-color: rgb(93, 158, 255);
+}
+
+#cout:hover{
+    
+    
+    background-color: rgb(93, 158, 255);
+}
+#subbu:hover{
+    background-color: rgb(93, 158, 255);
+}
+#subbu{
+    font-family: "Titillium Web" !important;
+    font-weight: 700;
+    font-size: 100%;
+    padding: 12px;
+    margin: -1%;
+    border-radius: 2px;
+    margin-left: 0%;
+    border-style: solid;
+    border: none;
+    position: relative;
+    border-radius: 5%;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top:60%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(93, 158, 255);
+}
+
+#cout{
+    font-family: "Titillium Web" !important;
+    font-weight: 700;
+    padding: 12px;
+    margin: -1%;
+    border-radius: 2px;
+    margin-left: 0%;
+    border-style: solid;
+    border: none;
+    position: relative;
+    border-radius: 5%;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(93, 158, 255);
+}
+
+i{
+    color: white;
+}
+
+input {
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+    border-bottom:none !important;
+}
